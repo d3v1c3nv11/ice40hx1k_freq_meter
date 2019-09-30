@@ -108,37 +108,35 @@ always @ (posedge CLK100MHz) begin
 		
 		if (r_fin == 2'b10) begin
 		// Count in BCD format
-							frequency[0] <= frequency[0] + 1;
-							if (frequency[0] == 9) begin
-								frequency[0] <= 0;
-								frequency[1] <= frequency[1] + 1;
-								if (frequency[1] == 9) begin
-								frequency[1] <= 0;
-								frequency[2] <= frequency[2] + 1;
-									if (frequency[2] == 9) begin
-									frequency[2] <= 0;
-									frequency[3] <= frequency[3] + 1;
-										if (frequency[3] == 9) begin
-										frequency[3] <= 0;
-										frequency[4] <= frequency[4] + 1;
-											if (frequency[4] == 9) begin
-											frequency[4] <= 0;
-											frequency[5] <= frequency[5] + 1;
-												if (frequency[5] == 9) begin
-												frequency[5] <= 0;
-												frequency[6] <= frequency[6] + 1;
-													if (frequency[6] == 9) begin
-													frequency[6] <= 0;
-													frequency[7] <= frequency[7] + 1;
-													end
-												end
-								
-											end
-										end
-									end
-								
+		frequency[0] <= frequency[0] + 1;
+		if (frequency[0] == 9) begin
+			frequency[0] <= 0;
+			frequency[1] <= frequency[1] + 1;
+			if (frequency[1] == 9) begin
+				frequency[1] <= 0;
+				frequency[2] <= frequency[2] + 1;
+				if (frequency[2] == 9) begin
+					frequency[2] <= 0;
+					frequency[3] <= frequency[3] + 1;
+					if (frequency[3] == 9) begin
+						frequency[3] <= 0;
+						frequency[4] <= frequency[4] + 1;
+						if (frequency[4] == 9) begin
+							frequency[4] <= 0;
+							frequency[5] <= frequency[5] + 1;
+							if (frequency[5] == 9) begin
+								frequency[5] <= 0;
+								frequency[6] <= frequency[6] + 1;
+								if (frequency[6] == 9) begin
+								frequency[6] <= 0;
+								frequency[7] <= frequency[7] + 1;
 								end
 							end
+						end
+					end
+				end
+			end
 		end
+	end
 end
 endmodule

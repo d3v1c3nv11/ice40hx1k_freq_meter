@@ -1,0 +1,6 @@
+set_io CLK100MHz 15
+set_io	FREQIN	1
+set_io	TXD	37
+set_io LED1 40
+set_io LED2 51
+
